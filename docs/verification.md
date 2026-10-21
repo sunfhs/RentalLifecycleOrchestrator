@@ -51,6 +51,19 @@ The historical record also leaves real WeChat capture → candidate display → 
 
 ## Boundary of this release
 
+### Contract-review documentation and research boundary
+
+The [contract explanation case](contract-explanation-case-study.md) and [Research Directions](research-directions.md) add public analysis, fictional examples and proposed evaluation methods. They do not add executed legal-review cases to the five recorded function checks. The existing 27-test record predates this documentation update and was not rerun for it.
+
+No risk-detection accuracy, evidence-grounding score, reviewer-effort improvement, abstention calibration or legal enforceability judgment has been measured here. No cryptographic audit log, digital-signature workflow, permissioned blockchain, public-chain anchoring or privacy-preserving proof system is implemented or verified by this release. Primary-source citation checks and documentation checks cannot establish those capabilities.
+
+Documentation validation on **2026-10-21 (Asia/Tokyo)**:
+
+- Checked the three new research entry points and relative Markdown/HTML links and heading fragments against local text files and the repository's asset manifest.
+- Parsed and rendered all **11 Mermaid diagrams** with Mermaid **11.12.1**, including six new diagrams or language variants; visually inspected the six additions. GitHub controls its own rendering version and theme.
+- Checked the added material for private source paths, contact/payment data, credentials, private Skill text and actual fee rules. The case packet and amounts are independently fictional; the existing illustration assets and deterministic-check record are retained.
+- Verified the three papers' metadata and stated scope through primary publications; linked Japanese restoration guidance and cryptographic references separately. No paper figures or dataset payloads are included.
+
 Not exercised by this release: live WeChat capture, end-to-end autonomous reply sending, persistent cross-channel state, automatic field-task dispatch, physical task completion, post-restart behavior or the compatibility of future agent tools.
 
 The business experience of approximately four years and 300+ completed client engagements is author-reported. No customer-level audit or deduplication was performed for publication. No accuracy, conversion or time-saving metric is inferred from these records.

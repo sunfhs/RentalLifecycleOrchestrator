@@ -27,6 +27,10 @@ The system overview, event sequence and verification illustrations are original 
 
 The diagrams label current components and target design separately. Synthetic events illustrate coordination requirements; they are not application screenshots, customer records or new execution evidence. The verification illustration summarizes the dated record rather than adding new test results.
 
+The [contract explanation case](contract-explanation-case-study.md) adds newly invented clauses, document identifiers and conflicting amounts. These are independent teaching examples, not redacted or lightly modified client materials. Its review flow and the [research diagrams](research-directions.md) are Mermaid source embedded in Markdown. They describe a conceptual review model and proposed research mechanisms. Existing SVG/PNG illustrations are retained.
+
+Research references are linked to their primary publications; no paper figures, dataset documents, private Skill text or operational fee rules are reproduced. Cryptographic logs, digital signatures, blockchains and privacy-preserving proofs are architecture candidates only. The public deterministic-check record's source fingerprint is an artifact identifier, not evidence that any signed log or ledger exists.
+
 ## Rights
 
 Copyright © 2026 sunfhs. All rights reserved in the original text and illustrations, except where another owner is identified. No general reuse license for the original project materials is granted by this repository. Third-party names, links and licenses remain subject to their owners' terms. No ownership is claimed over third-party tools or general technical methods.

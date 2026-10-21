@@ -6,6 +6,8 @@
 
 **租赁客户生命周期编排：把客户对接、业务知识、AI 辅助与现实行动连接起来。**
 
+[契约中文说明：公开技术案例](docs/contract-explanation-case-study.md) · [研究方向与已核实论文](docs/research-directions.md)（正文为英文）
+
 我从事日本租赁相关工作约**四年**，累计全程负责 **300+ 成交客户**，工作从初次咨询持续到钥匙交付及后续协助。年限和数量为本人提供的经验估算，描述的是我的业务经历，不代表 AI 系统处理了相同数量的客户。
 
 长期接客积累的不只是聊天记录。更有用的是知道一条信息为什么重要、某个阶段还缺什么、哪些情况必须再问，以及什么时候该真正去做一件事。这个项目把这些判断整理成流程、知识结构、任务技能和程序模块，并记录它们如何配合。
@@ -153,6 +155,24 @@ Jev 提供桌面助手基础，包含截图与 OCR 等上游能力。我的工�
 | Muse、GPTdot、Grokbot、Growth | 研究未来个人代理、桌面代理或 AI 助手的可能角色 | 产品身份与适配待确认，不声称已接入 |
 
 Muse 的等待名单来自本人当前的采用条件。对其他候选也先确认具体产品，再比较上下文覆盖、跨会话状态、工具接入、动作确认、可追踪性、数据路径、可用性与成本。一个软件能看当前屏幕，还不足以证明它能管理完整客户生命周期。
+
+## 契约审查案例与学术收尾
+
+[`chongshuo-contract-cn` 公开技术案例](docs/contract-explanation-case-study.md)围绕原状回復、通常損耗、广泛责任特约、跨文件金额冲突、证据追溯和人工审核展开。材料、金额与条款均为虚构；介绍的是既有私有 Skill 的作用与公开审查模型，不公开 Skill 原文、实际费用规则或客户材料，也不把风险提示写成自动法律裁决。
+
+```mermaid
+flowchart LR
+    A["文档证据"] --> B["定位风险线索<br/>及冲突条款"]
+    B --> C{"证据是否充分？"}
+    C -->|否| D["保留结论<br/>进入人工复核"]
+    C -->|是| E["形成有据说明<br/>由人工批准"]
+    classDef review fill:#fff3d9,stroke:#9b7526,color:#493813;
+    class C,D review;
+```
+
+*契约审查的概念流程，不代表自动服务或已取得的评估结果。*
+
+[Research Directions](docs/research-directions.md)核实并引用 **A Benchmark for Lease Contract Review、CUAD、LegalBench**，提出风险条款识别、有证据支撑的法律 AI、按错误代价安排人工审核、信息不足时保留判断（abstention）及可复现评估。另设 **Blockchain / Cryptographic Audit / Digital Signatures / Privacy-Preserving Verification** 架构比较，分析普通签名审计日志与许可链的权衡。相关机制均未实现，客户隐私信息不上链；本次收尾不增加业务执行功能。
 
 ## 赛季节奏
 

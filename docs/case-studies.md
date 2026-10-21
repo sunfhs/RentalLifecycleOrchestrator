@@ -4,6 +4,8 @@
 
 All client situations below are synthetic. The first case contains an executed deterministic function check. Field dispatch and seasonal examples are design illustrations, not evidence of a deployed autonomous system or a completed seasonal review.
 
+For a detailed document-review case, see [Contract explanation as evidence-based review](contract-explanation-case-study.md): restoration, ordinary wear, broad special clauses, conflicting amounts and human review. Its fictional packet illustrates review reasoning, not an executed legal-AI benchmark. [Research directions](research-directions.md) defines the proposed empirical follow-up.
+
 ## 1. Find the next question before drafting an answer
 
 **Situation.** A prospective client writes: `4月1日入住` — “Move in on April 1.” The day and month are present, but the year is not.

@@ -1,5 +1,13 @@
 # Project record
 
+## 2026-10-21 — Contract-review case and research handoff
+
+- Added a public technical case for `chongshuo-contract-cn`, using independently fictional materials to discuss restoration, ordinary wear, broad special clauses, conflicting amounts, evidence traceability and human review.
+- Added Research Directions with verified primary references to A Benchmark for Lease Contract Review, CUAD and LegalBench; proposed task definitions, cost-sensitive review, abstention and a reproducible evaluation protocol.
+- Compared conventional signed audit logs, permissioned blockchains, digital signatures and privacy-preserving verification as unimplemented research options. Customer information remains off chain.
+- Added Mermaid review and research diagrams, linked both pages from all three READMEs, and retained the existing illustration assets.
+- Clarified that this documentation update does not rerun private runtime tests, supply legal-AI benchmark results or implement new business actions.
+
 ## 2026-10-21 — First public dossier
 
 - Established the client-lifecycle framing, with routine coordination and field assignments as the long-term operating direction.

@@ -134,6 +134,8 @@ Lifecycle coordination therefore needs durable records of confirmed events and u
 
 These skills are maintained instructions and reference rules used in a tool-assisted workflow. Their existence does not mean a self-contained service automatically executes them. This public view omits their detailed rules and inputs containing customer information.
 
+The [contract explanation case](contract-explanation-case-study.md) develops this boundary through fictional restoration clauses and conflicting amounts. The [research architecture comparison](research-directions.md#track-b-blockchain--cryptographic-audit--digital-signatures--privacy-preserving-verification) considers conventional signed audit logs, permissioned blockchains and minimal-disclosure verification as future alternatives. None of those cryptographic mechanisms is implemented or established by the current architecture diagrams.
+
 ## Data and action boundaries
 
 The local rental generation mode restricts its generation endpoint to a loopback service. Notion and Codex have separate service boundaries; the overall workflow is not claimed to run wholly offline. A connection to Notion also does not inherently imply a read-only or single-page permission boundary; access must be considered at the client and account level. See the [Notion MCP documentation](https://developers.notion.com/guides/mcp/get-started-with-mcp).

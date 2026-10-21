@@ -6,6 +6,8 @@
 
 **AI-assisted client operations, from first inquiry to key handover.**
 
+[Contract explanation: public technical case](docs/contract-explanation-case-study.md) · [Research directions and verified literature](docs/research-directions.md)
+
 A field-informed project connecting private operational knowledge, desktop context, reusable task skills and client lifecycle design in Japanese rental services.
 
 I have approximately **four years of rental-service experience** and have personally handled **300+ completed client engagements**, from initial contact through key handover and subsequent support. These are my own career estimates; they describe my business experience, not the number of clients served by an AI system.
@@ -131,6 +133,24 @@ The present evidence consists of installed-source consistency, 27 selected offli
 
 The intended progression is from human-reviewed assistance toward routine coordination with human handling of exceptions and physical work. Each expansion of action scope needs its own scenario evidence, including recovery when a confirmation is missing or an earlier decision becomes stale. [Detailed verification record](docs/verification.md)
 
+## Contract review and research handoff
+
+The [public case on `chongshuo-contract-cn`](docs/contract-explanation-case-study.md) examines 原状回復, ordinary wear, broad special clauses, conflicting amounts, evidence traceability and human review using wholly fictional materials. It explains the existing private skill's role without publishing its instructions or business rules.
+
+```mermaid
+flowchart LR
+    A["Document evidence"] --> B["Locate issues<br/>and conflicting terms"]
+    B --> C{"Evidence sufficient?"}
+    C -->|No| D["Withhold conclusion<br/>Human review"]
+    C -->|Yes| E["Supported explanation<br/>Human approval"]
+    classDef review fill:#fff3d9,stroke:#9b7526,color:#493813;
+    class C,D review;
+```
+
+*Conceptual contract-review flow, not an automated service or measured result.*
+
+[Research directions](docs/research-directions.md) connects the case to **A Benchmark for Lease Contract Review**, **CUAD** and **LegalBench**. Proposed work covers red-flag detection, evidence-grounded legal AI, cost-sensitive human review, abstention and reproducible evaluation. A separate architecture comparison examines **Blockchain / Cryptographic Audit / Digital Signatures / Privacy-Preserving Verification**, starting with conventional signed logs and comparing permissioned ledgers. All these research mechanisms remain unimplemented; customer information stays off chain. No new business execution capability is added.
+
 ## Seasonal maintenance
 
 The main operating season is **January–April**. Afterward, the process and frequently used phrases receive a small review. Public property or living-information checklists are prepared for Chinese media such as Xiaohongshu when business needs justify them.
@@ -145,6 +165,8 @@ The main operating season is **January–April**. Afterward, the process and fre
 |---|---|
 | How does the system fit together? | [Architecture](docs/architecture.md) |
 | What would it do in a real situation? | [Case studies](docs/case-studies.md) |
+| How can contract explanation preserve evidence and uncertainty? | [Contract explanation case](docs/contract-explanation-case-study.md) |
+| What could become an academic study or audit experiment? | [Research directions](docs/research-directions.md) |
 | Why these tools, and what could replace them? | [Tooling decisions](docs/tooling-decisions.md) |
 | What has actually been checked? | [Verification](docs/verification.md) |
 | What is public, and what is retained privately? | [Provenance and rights](docs/provenance-and-rights.md) |
