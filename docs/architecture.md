@@ -54,6 +54,34 @@ Solid paths describe component relationships. Dashed connections into the target
 
 Reference text is useful without being evidence. The existing extension labels retrieved business material separately from visible conversation context. The planned state layer must preserve that distinction over time, including which source supplied a fact and whether it remains unresolved.
 
+## Mechanisms behind the terminology
+
+### Retrieval-augmented prompting with lexical retrieval
+
+The implemented path is `query + visible context → topic conditions → lexical fallback → source-linked references → augmented prompt`. The fallback uses CJK character bigrams and alphanumeric tokens, scores overlap with additional title relevance and a length normalization, and selects a narrow result. Topic-conditioned paths can return a selected set of references or no reference.
+
+This is **lexical retrieval-augmented prompting**, sometimes described as lexical RAG. It grounds generation in retrieved reference text without training the model. Stage-related conditions are explicitly encoded; they are not evidence of a learned lifecycle classifier. No BM25, embeddings, vector database or semantic reranker is claimed for this private retrieval module.
+
+### Prompt-level context isolation and deterministic validation
+
+The extension separates reference material from current conversation text in the augmented context and supplies system-level instructions on how to use it. **Grounding** here means constraining the answer to relevant sources and confirmed client information. This is prompt-level handling, not a proven defense against every prompt-injection or hallucination case.
+
+Calendar checks are **deterministic validators**: missing years, competing dates and invalid dates return explicit clarification states. Selected candidate checks are **heuristic output guardrails**: they match some unsupported commitments and suppress rejected candidates before display. The two mechanisms have different guarantees; passing a text-pattern filter does not establish factual accuracy. The [synthetic records](../evidence/deterministic-checks.json) show executed examples of both.
+
+### Native event entry and bounded acquisition
+
+The hotkey uses Python `ctypes` to call macOS Carbon's `RegisterEventHotKey`. A native hotkey event opens the request window; the assistant's existing acquisition loop then operates within that bound. **Event-triggered entry** therefore describes the hotkey, not a subscription to every client message.
+
+The upstream capture route uses Apple Vision OCR; accessibility text is another upstream route. Foreground-state handling and copy-only output in the rental mode address a **stale-context** problem: the active conversation may change after the captured context was produced. This reduces one known destination risk; it does not prove every context-switch race is resolved.
+
+### Event-driven orchestration and a guarded state machine
+
+The target lifecycle layer is modeled as a **guarded finite-state workflow**. A case has a stage, unresolved facts and prerequisites. A verified event can enable a transition or task; generated prose alone cannot do so. The durable state must survive a screen change or restart, unlike a transient prompt.
+
+**Idempotency** means a repeated notice should have one intended task effect. **Stale-task invalidation** means a changed appointment makes the old assignment non-actionable. **Provenance-aware transitions** retain the evidence behind a state change. These are design requirements and acceptance scenarios; no event bus, event-sourced database, transactional outbox or persistent workflow engine is claimed as implemented.
+
+The current output path is **human-in-the-loop**. The longer-term ambition is routine autonomous coordination with **human-on-exception** handling, while physical actions and their completion reports remain explicit. Moving between those modes requires evaluating actual scenarios and action boundaries; a new agent product alone does not supply the missing state layer.
+
 ## The implemented desktop adaptation
 
 The private adaptation builds on Jev's desktop assistant. In the on-demand mode:

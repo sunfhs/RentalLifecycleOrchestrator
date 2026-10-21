@@ -63,6 +63,17 @@ flowchart LR
 
 ## Engineering choices worth discussing
 
+The technical framing is **domain-specific retrieval-augmented prompting, deterministic validation and event-driven workflow orchestration**. The first two describe implemented modules; orchestration is the next architectural layer.
+
+| Technical concept | Concrete use here | Status |
+|---|---|---|
+| **Lexical RAG / retrieval-augmented prompting** | Conditional routing plus CJK bigram and token-overlap retrieval supplies source-linked context to generation | Implemented in the private extension |
+| **Prompt-level context isolation and grounding** | Business references and client observations have distinct roles; a reference cannot establish a case fact | Implemented context instructions; not a complete security boundary |
+| **Deterministic validation and heuristic guardrails** | Calendar checks and selected text-pattern checks run around model output | Implemented with selected offline coverage |
+| **Bounded desktop context acquisition** | Native hotkey registration opens a limited capture request; the output path accounts for foreground changes | Implemented adaptation on Jev |
+| **Guarded state transitions and durable case state** | Confirmed events, rather than generated text, determine whether a lifecycle stage can advance | Orchestration design |
+| **Idempotent task dispatch and stale-task invalidation** | Duplicate notices should create one task; a changed appointment should invalidate the old schedule | Target acceptance behavior |
+
 **Separate reference knowledge from case facts.** A template that says “payment received” explains a situation; it is not evidence that this client paid. Retrieved knowledge and observed client context must keep distinct roles.
 
 **Capture deliberately.** The private Jev mode uses a registered hotkey and a bounded capture window. Its output remains under manual control. A screen observation covers only visible context; phone calls, other devices and unopened history require another source of case state.
