@@ -49,6 +49,31 @@ This case intentionally stays at the coordination level. Actual signing requirem
 
 **Acceptance scenarios for the future layer:** confirmed event creates one appropriate task; missing prerequisites hold it; a repeated event does not duplicate it; a changed appointment invalidates the old time; failed collection records an exception rather than marking handover complete.
 
+### Event-to-task interaction
+
+![Event-to-task sequence and pending branch](../assets/event-to-task.png)
+
+```mermaid
+sequenceDiagram
+    participant E as Event source
+    participant C as Target coordinator
+    participant S as Target case state
+    participant H as Person
+    E->>C: Relevant availability or appointment confirmation
+    C->>S: Check case, evidence and prerequisites
+    alt Prerequisites remain unresolved
+        S-->>C: Pending facts
+        C-->>H: Request clarification, keep task pending
+    else Prerequisites confirmed
+        S-->>C: Action is ready
+        C->>H: Assign time, place and required action
+        H->>C: Report actual result or exception
+        C->>S: Record outcome and next unresolved work
+    end
+```
+
+This sequence describes the target coordinator. It does not imply that the event source is already connected to a message queue, that case state is persisted, or that a physical action has been executed. Duplicate notices, rescheduling and failed execution are distinct acceptance scenarios because each can otherwise create a plausible but incorrect lifecycle update.
+
 ## 3. Turn seasonal friction into the next revision
 
 **Situation.** Similar questions recur during the main season. The underlying issue might be a confusing explanation, a missing handoff or information that changed.

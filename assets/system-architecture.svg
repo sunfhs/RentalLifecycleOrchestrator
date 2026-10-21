@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" role="img" aria-labelledby="title desc">
+<title id="title">System architecture</title><desc id="desc">Existing private knowledge and desktop assistance, connected conceptually to a target lifecycle coordination layer. Dashed target frame denotes design, not a running service.</desc>
+<rect width="1200" height="1040" fill="#f4f3ed"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="48" y="55" font-size="18" fill="#187369" font-weight="400" text-anchor="start">ARCHITECTURE / COMPONENT RESPONSIBILITIES</text>
+<text x="48" y="112" font-size="42" fill="#172d36" font-weight="600" text-anchor="start">Knowledge, assistance, coordination</text>
+<rect x="48" y="155" width="1104" height="181" rx="8" fill="#e5ebe4"/>
+<text x="76" y="192" font-size="18" fill="#187369" font-weight="400" text-anchor="start">01 / PRIVATE KNOWLEDGE</text>
+<text x="1124" y="192" font-size="17" fill="#53656a" font-weight="400" text-anchor="end">EXISTING ASSETS</text>
+<rect x="76" y="211" width="504" height="95" rx="8" fill="#fffefa"/>
+<text x="98" y="249" font-size="29" fill="#172d36" font-weight="600" text-anchor="start">Notion operating source</text>
+<text x="98" y="284" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">Procedures · phrases · stages</text>
+<rect x="620" y="211" width="504" height="95" rx="8" fill="#fffefa"/>
+<text x="642" y="249" font-size="29" fill="#172d36" font-weight="600" text-anchor="start">Task skills</text>
+<text x="642" y="284" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">Documents · costs · screening</text>
+<path d="M600 345 L600 378" fill="none" stroke="#187369" stroke-width="2"/><path d="M594.8 369.5 L600 378 L605.2 369.5" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="626" y="369" font-size="18" fill="#53656a" font-weight="400" text-anchor="start">Selected extraction</text>
+<rect x="48" y="394" width="1104" height="252" rx="8" fill="#e5ebe4"/>
+<text x="76" y="432" font-size="18" fill="#187369" font-weight="400" text-anchor="start">02 / LOCAL ASSISTANCE</text>
+<text x="1124" y="432" font-size="17" fill="#53656a" font-weight="400" text-anchor="end">IMPLEMENTED MODULES</text>
+<rect x="76" y="458" width="232" height="125" rx="8" fill="#fffefa"/>
+<text x="93" y="494" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Capture</text>
+<text x="93" y="531" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Hotkey request</text>
+<text x="93" y="560" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Bounded context</text>
+<path d="M317 520 L338 520" fill="none" stroke="#187369" stroke-width="2"/><path d="M329.5 525.2 L338 520 L329.5 514.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<rect x="348" y="458" width="232" height="125" rx="8" fill="#fffefa"/>
+<text x="365" y="494" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Retrieve</text>
+<text x="365" y="531" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Conditional routing</text>
+<text x="365" y="560" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Lexical matching</text>
+<path d="M589 520 L610 520" fill="none" stroke="#187369" stroke-width="2"/><path d="M601.5 525.2 L610 520 L601.5 514.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<rect x="620" y="458" width="232" height="125" rx="8" fill="#fffefa"/>
+<text x="637" y="494" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Generate</text>
+<text x="637" y="531" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Local inference</text>
+<text x="637" y="560" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Reference context</text>
+<path d="M861 520 L882 520" fill="none" stroke="#187369" stroke-width="2"/><path d="M873.5 525.2 L882 520 L873.5 514.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<rect x="892" y="458" width="232" height="125" rx="8" fill="#fffefa"/>
+<text x="909" y="494" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Check + review</text>
+<text x="909" y="531" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Selected checks</text>
+<text x="909" y="560" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Manual sending</text>
+<text x="76" y="619" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">Jev adaptation + source-linked snapshot + Ollama</text>
+<path d="M600 659 L600 692" fill="none" stroke="#187369" stroke-width="2" stroke-dasharray="6 6"/><path d="M594.8 683.5 L600 692 L605.2 683.5" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="626" y="683" font-size="18" fill="#53656a" font-weight="400" text-anchor="start">Future integration</text>
+<rect x="48" y="714" width="1104" height="232" rx="8" fill="#ece7dc" stroke="#a58d65" stroke-dasharray="7 6"/>
+<text x="76" y="752" font-size="18" fill="#80683c" font-weight="400" text-anchor="start">03 / LIFECYCLE COORDINATION</text>
+<text x="1124" y="752" font-size="17" fill="#80683c" font-weight="400" text-anchor="end">TARGET DESIGN</text>
+<rect x="76" y="781" width="324" height="96" rx="8" fill="#fffefa"/>
+<text x="94" y="820" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Case state</text>
+<text x="94" y="854" font-size="21" fill="#53656a" font-weight="400" text-anchor="start">Confirmed + unresolved</text>
+<rect x="438" y="781" width="324" height="96" rx="8" fill="#fffefa"/>
+<text x="456" y="820" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Readiness gates</text>
+<text x="456" y="854" font-size="21" fill="#53656a" font-weight="400" text-anchor="start">Evidence + prerequisites</text>
+<rect x="800" y="781" width="324" height="96" rx="8" fill="#fffefa"/>
+<text x="818" y="820" font-size="27" fill="#172d36" font-weight="600" text-anchor="start">Field task + result</text>
+<text x="818" y="854" font-size="21" fill="#53656a" font-weight="400" text-anchor="start">Assignment + completion</text>
+<text x="76" y="917" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">Client events · external confirmations · physical-work reports</text>
+<path d="M48 977 L1152 977" fill="none" stroke="#bbc9bf" stroke-width="2"/>
+<text x="48" y="1013" font-size="19" fill="#53656a" font-weight="400" text-anchor="start">Conceptual links do not imply live synchronization or autonomous execution.</text>
+</g></svg>

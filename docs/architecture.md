@@ -4,6 +4,8 @@
 
 The architecture has two time horizons. The current implementation assists a person during particular tasks and conversations. The lifecycle direction adds durable case state and coordinates work across time, channels and physical actions.
 
+![System overview with existing assets, local assistance and the target coordination layer](../assets/system-architecture.png)
+
 ## Current components and the target layer
 
 ```mermaid
@@ -81,6 +83,24 @@ The target lifecycle layer is modeled as a **guarded finite-state workflow**. A 
 **Idempotency** means a repeated notice should have one intended task effect. **Stale-task invalidation** means a changed appointment makes the old assignment non-actionable. **Provenance-aware transitions** retain the evidence behind a state change. These are design requirements and acceptance scenarios; no event bus, event-sourced database, transactional outbox or persistent workflow engine is claimed as implemented.
 
 The current output path is **human-in-the-loop**. The longer-term ambition is routine autonomous coordination with **human-on-exception** handling, while physical actions and their completion reports remain explicit. Moving between those modes requires evaluating actual scenarios and action boundaries; a new agent product alone does not supply the missing state layer.
+
+## Conceptual objects and module contracts
+
+The following contracts describe the intended responsibilities between modules. They are a behavioral model, not a published API or an assertion that all objects have persistent implementations today.
+
+| Concept | What it represents | Required distinction |
+|---|---|---|
+| Case | A particular client engagement over time | Its identity must outlast one visible chat window |
+| Observation | Text, a document or a reported event | Acquisition is not the same as confirmation |
+| Confirmed fact | Case information accepted with supporting evidence | Its source and current validity matter |
+| Reference | A procedure, phrase or task instruction | It describes how work is normally handled |
+| Candidate | A generated answer or proposed action | It does not change case state by existing |
+| Task | A concrete assignment with prerequisites | Readiness differs from completion |
+| Result | A report of what actually happened | Failure and exception remain valid outcomes |
+
+The desktop adapter supplies observations; retrieval supplies references; the model supplies candidates; deterministic checks constrain selected interpretations. The target coordinator is responsible for confirmed state and action readiness. The person remains the source of physical-task results. Keeping these roles explicit makes a tool replaceable without silently transferring business authority to it.
+
+The next orchestration layer should preserve traceability from an action back to its triggering event and relevant facts. That calls for durable case records, but it does not require the public dossier to choose a particular database, event bus or agent framework before implementation evidence justifies one.
 
 ## The implemented desktop adaptation
 

@@ -46,3 +46,29 @@ Muse, GPTdot, Grokbot and Growth are labels in the author's future-tool research
 | Availability and cost | Can the author actually access it and maintain the workflow? |
 
 The initial choice is to document and check the existing components. A future agent becomes useful when it closes a demonstrated gap, especially persistent state or controlled actions across tools. The public dossier does not depend on access to a waitlisted product.
+
+## Decision records
+
+### Keep operating knowledge outside the model
+
+The current knowledge collection is maintained separately from the model and retrieved for a particular question. This lets a workflow or phrase change be reviewed at its source, with snapshot freshness handled explicitly. It also avoids treating the model's memory as an authoritative operating manual.
+
+The tradeoff is retrieval coverage. Conditional and lexical selection can miss paraphrases and cannot establish that all relevant knowledge was found. An embedding-based or hybrid retriever would become justified by recurring, labeled retrieval failures. It is not added simply to make the architecture appear more advanced.
+
+### Start with a bounded desktop adapter
+
+The private adaptation reuses Jev's existing desktop path while narrowing when capture is requested and how candidates are handled. This makes a particular workflow inspectable without claiming deep integration with the messaging platform or reading its full historical database.
+
+The tradeoff is partial observability and interface dependence. A different UI version, layout or permission state can change capture behavior. A future connector or agent should be assessed for what context it actually supplies and how it identifies the case, not just for whether it can produce a screenshot.
+
+### Separate coordination from language generation
+
+Language generation is useful for interpreting a question and drafting communication. Stage transitions, appointment readiness and completed actions need their own supporting facts. The target architecture therefore keeps the coordinator's responsibilities separate from the model's draft.
+
+That separation adds explicit concepts such as pending facts and task results. It is justified by concrete failure cases: repeated confirmations, changed times and unsuccessful handovers. The present dossier records these requirements without selecting an unimplemented workflow engine or pretending that prompt instructions supply transaction semantics.
+
+### Keep tool replacement at a known boundary
+
+Muse or another future personal agent might improve acquisition or tool execution. The existing knowledge organization and case concepts should remain intelligible independently of the vendor. The replacement question is which responsibility the new tool can reliably assume, what evidence it produces, and what state still needs to be retained elsewhere.
+
+The resulting cost is integration work at each boundary. The benefit is that a change of model or desktop tool need not silently rewrite the business meaning of “confirmed,” “ready” or “completed.” Product identity and practical access are evaluated before any compatibility claim.

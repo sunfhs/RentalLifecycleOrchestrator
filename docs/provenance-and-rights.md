@@ -21,6 +21,12 @@ Client records, contracts, invoices, complete operating procedures, phrases, ski
 
 Public examples are newly constructed synthetic situations. They do not use redacted client screenshots. No claim is made that publishing a copyright notice prevents copying; confidentiality is maintained by retaining the underlying assets outside the repository.
 
+## Illustrations
+
+The system overview, event sequence and verification illustrations are original explanatory diagrams. Their PNG images are rendered from the accompanying SVG sources: [system architecture](../assets/system-architecture.svg), [event-to-task sequence](../assets/event-to-task.svg), and [verification layers](../assets/verification-layers.svg).
+
+The diagrams label current components and target design separately. Synthetic events illustrate coordination requirements; they are not application screenshots, customer records or new execution evidence. The verification illustration summarizes the dated record rather than adding new test results.
+
 ## Rights
 
 Copyright © 2026 sunfhs. All rights reserved in the original text and illustrations, except where another owner is identified. No general reuse license for the original project materials is granted by this repository. Third-party names, links and licenses remain subject to their owners' terms. No ownership is claimed over third-party tools or general technical methods.

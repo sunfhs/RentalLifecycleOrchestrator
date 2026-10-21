@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1060" viewBox="0 0 1200 1060" role="img" aria-labelledby="title desc">
+<title id="title">Event-to-task sequence</title><desc id="desc">Target design sequence with synthetic events. A confirmed event is checked against case prerequisites; incomplete facts keep work pending. Ready tasks go to a person, whose result updates case evidence.</desc>
+<rect width="1200" height="1060" fill="#f4f3ed"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="48" y="55" font-size="18" fill="#187369" font-weight="400" text-anchor="start">SEQUENCE / TARGET ORCHESTRATION DESIGN</text>
+<text x="48" y="112" font-size="42" fill="#172d36" font-weight="600" text-anchor="start">From confirmation to field action</text>
+<rect x="48" y="162" width="246" height="91" rx="8" fill="#e5ebe4"/>
+<text x="171" y="199" font-size="27" fill="#172d36" font-weight="600" text-anchor="middle">Event source</text>
+<text x="171" y="232" font-size="19" fill="#53656a" font-weight="400" text-anchor="middle">External confirmation</text>
+<path d="M171 265 L171 916" fill="none" stroke="#bbc9bf" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="334" y="162" width="246" height="91" rx="8" fill="#ece7dc"/>
+<text x="457" y="199" font-size="27" fill="#172d36" font-weight="600" text-anchor="middle">Coordinator</text>
+<text x="457" y="232" font-size="19" fill="#53656a" font-weight="400" text-anchor="middle">Target layer</text>
+<path d="M457 265 L457 916" fill="none" stroke="#bbc9bf" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="620" y="162" width="246" height="91" rx="8" fill="#ece7dc"/>
+<text x="743" y="199" font-size="27" fill="#172d36" font-weight="600" text-anchor="middle">Case state</text>
+<text x="743" y="232" font-size="19" fill="#53656a" font-weight="400" text-anchor="middle">Target layer</text>
+<path d="M743 265 L743 916" fill="none" stroke="#bbc9bf" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="906" y="162" width="246" height="91" rx="8" fill="#e5ebe4"/>
+<text x="1029" y="199" font-size="27" fill="#172d36" font-weight="600" text-anchor="middle">Person</text>
+<text x="1029" y="232" font-size="19" fill="#53656a" font-weight="400" text-anchor="middle">Physical work</text>
+<path d="M1029 265 L1029 916" fill="none" stroke="#bbc9bf" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M171 312 L457 312" fill="none" stroke="#187369" stroke-width="2"/><path d="M448.5 317.2 L457 312 L448.5 306.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="314.0" y="295" font-size="23" fill="#172d36" font-weight="400" text-anchor="middle">Confirmed event</text>
+<path d="M457 402 L743 402" fill="none" stroke="#187369" stroke-width="2"/><path d="M734.5 407.2 L743 402 L734.5 396.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="600.0" y="385" font-size="23" fill="#172d36" font-weight="400" text-anchor="middle">Check prerequisites</text>
+<path d="M743 492 L457 492" fill="none" stroke="#187369" stroke-width="2" stroke-dasharray="6 6"/><path d="M465.5 486.8 L457 492 L465.5 497.2" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="600.0" y="475" font-size="23" fill="#172d36" font-weight="400" text-anchor="middle">Ready / unresolved</text>
+<path d="M457 702 L1029 702" fill="none" stroke="#187369" stroke-width="2"/><path d="M1020.5 707.2 L1029 702 L1020.5 696.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="743.0" y="685" font-size="23" fill="#172d36" font-weight="400" text-anchor="middle">Assign confirmed task</text>
+<path d="M1029 797 L457 797" fill="none" stroke="#187369" stroke-width="2" stroke-dasharray="6 6"/><path d="M465.5 791.8 L457 797 L465.5 802.2" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="743.0" y="780" font-size="23" fill="#172d36" font-weight="400" text-anchor="middle">Result or exception</text>
+<path d="M457 892 L743 892" fill="none" stroke="#187369" stroke-width="2"/><path d="M734.5 897.2 L743 892 L734.5 886.8" fill="none" stroke="#187369" stroke-width="2.5"/>
+<text x="600.0" y="875" font-size="23" fill="#172d36" font-weight="400" text-anchor="middle">Update case evidence</text>
+<rect x="48" y="536" width="552" height="97" rx="8" fill="#ece7dc"/>
+<text x="73" y="575" font-size="25" fill="#172d36" font-weight="600" text-anchor="start">If incomplete: keep the task pending</text>
+<text x="73" y="611" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">Request the missing confirmation.</text>
+<text x="72" y="675" font-size="18" fill="#187369" font-weight="400" text-anchor="start">WHEN READY</text>
+<path d="M48 955 L1152 955" fill="none" stroke="#bbc9bf" stroke-width="2"/>
+<text x="48" y="993" font-size="19" fill="#53656a" font-weight="400" text-anchor="start">Synthetic design sequence. Durable state and automatic dispatch are target capabilities.</text>
+<text x="48" y="1026" font-size="19" fill="#53656a" font-weight="400" text-anchor="start">A reported result can be completion, failure or an exception.</text>
+</g></svg>

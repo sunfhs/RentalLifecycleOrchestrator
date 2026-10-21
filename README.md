@@ -20,6 +20,21 @@ For example, a contract arriving is an event. An appointment becomes actionable 
 
 The project grows out of operating procedures and document work already used in my practice, together with a private rental-specific extension of [Jev](https://github.com/jev-chat/jev-chat-jarvis-mac). This repository publishes selected case studies and engineering decisions. The domain knowledge and implementation remain private.
 
+## Problem formulation
+
+Rental coordination is a partially observable, long-running process. A single case spans client conversations, property information, management-company responses, document revisions and physical handoffs. The person coordinating it repeatedly reconstructs what has happened and what is still missing. A fluent response helps with communication, but the operating problem also includes state, timing and responsibility.
+
+Three boundaries shape the technical design. First, general operating knowledge changes more slowly than the facts of an individual case. Second, information received through a screen is an observation with limited coverage. Third, the cost of an incorrect action differs from the cost of an imperfect draft: asking an unnecessary question and arranging an unconfirmed visit have different consequences.
+
+The project therefore treats **knowledge retrieval, case-state interpretation and action readiness** as separate concerns. A stage can guide which references to retrieve without proving that all of its prerequisites are satisfied. A document can be prepared before it is ready for delivery. A task can be proposed before it is safe to schedule. These distinctions determine the module boundaries.
+
+| Operational friction | Engineering response |
+|---|---|
+| Repeated explanations with small contextual differences | Maintain a knowledge source and retrieve for the current question |
+| Relevant information scattered across time and channels | Design durable, source-aware case state with unresolved facts |
+| A convincing draft implies more certainty than the evidence supports | Apply deterministic checks and keep draft, fact and action distinct |
+| A person must continually remember the next physical step | Define event-to-task transitions with prerequisites and completion reports |
+
 ## What exists today
 
 | Asset | Current evidence | Role in the lifecycle |
@@ -59,7 +74,9 @@ flowchart LR
 
 [Read the three cases →](docs/case-studies.md)
 
-![Illustrative field task: confirmed key-release event, appointment and completion report](assets/field-task.svg)
+![Target event-to-task sequence: confirmation, readiness check, field assignment and completion](assets/event-to-task.png)
+
+*An orchestration design sequence using synthetic events. A task is proposed only after its prerequisites; the person reports what actually happened.*
 
 ## Engineering choices worth discussing
 
@@ -86,11 +103,33 @@ The technical framing is **domain-specific retrieval-augmented prompting, determ
 
 [Architecture and current boundaries](docs/architecture.md) · [Tooling decisions and future agents](docs/tooling-decisions.md)
 
+## System model and module responsibilities
+
+The architecture separates a **knowledge plane**, a **current assistance path** and a **target coordination layer**. Notion and task skills describe how work should be performed. The desktop path observes a bounded context, retrieves references and prepares a constrained candidate. The planned coordination layer maintains a case across interactions and derives actions from confirmed events.
+
+![System architecture showing existing knowledge assets, local assistance and the target coordination layer](assets/system-architecture.png)
+
+The conceptual objects are a case, an observation, a confirmed fact, a reference, a proposed action and an action result. These are responsibilities in the design, not a claim that a production database already implements them. The key interface is the transition between these roles: an observation needs interpretation; a candidate needs evidence; a completed task needs a result.
+
+This separation also gives tools a replacement boundary. A different desktop agent could supply observations without owning the business rules. A different model could generate drafts without deciding that a payment was confirmed. A retrieval change could be evaluated against the same scenario collection while preserving the case model.
+
+The public specification stays at the behavioral level. Detailed fee rules, actual client records and production-facing message templates remain in the private assets.
+
 ## My contribution
 
 My work covers the rental-domain model, stage-specific knowledge organization, reusable document and screening workflows, and a private adaptation of Jev for this setting. The adaptation includes on-demand behavior, domain retrieval, date checks, constraints on selected unsupported claims, and checks for output and foreground-state handling.
 
 Jev supplies the upstream desktop-assistant foundation, including its capture and UI mechanisms. Ollama and the configured model supply inference. Notion and Codex supply their respective platform capabilities. Those are attributed separately from my domain design and adaptation.
+
+## Reliability and evaluation strategy
+
+The evaluation question depends on the layer. A date function can be checked against explicit inputs and outputs. A context-switch handler can be exercised in an offline fixture. A generated reply needs factual and stage relevance assessment. A field assignment needs evidence that its prerequisites and destination are current. Success in one layer does not establish success in the next.
+
+![Verification layers separating source inspection, offline tests, synthetic checks and field acceptance](assets/verification-layers.png)
+
+The present evidence consists of installed-source consistency, 27 selected offline test passes and five recorded synthetic function checks. Future evaluation should use stage-labeled synthetic scenarios, missing or conflicting facts, duplicate notices and changed appointments. Useful measures would include inappropriate stage advancement, unsupported factual claims and duplicate task creation. No scores for those future measures are claimed here.
+
+The intended progression is from human-reviewed assistance toward routine coordination with human handling of exceptions and physical work. Each expansion of action scope needs its own scenario evidence, including recovery when a confirmation is missing or an earlier decision becomes stale. [Detailed verification record](docs/verification.md)
 
 ## Seasonal maintenance
 

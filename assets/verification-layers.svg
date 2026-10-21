@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
+<title id="title">Verification layers</title><desc id="desc">Inspected source consistency, 27 selected offline tests and five synthetic function checks are separate evidence layers. Live chat capture and autonomous coordination require field acceptance and are outside these checks.</desc>
+<rect width="1200" height="920" fill="#f4f3ed"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<text x="48" y="55" font-size="18" fill="#187369" font-weight="400" text-anchor="start">VERIFICATION / EVIDENCE AND ACCEPTANCE</text>
+<text x="48" y="112" font-size="42" fill="#172d36" font-weight="600" text-anchor="start">Evidence with explicit boundaries</text>
+<rect x="48" y="166" width="1104" height="124" rx="8" fill="#e5ebe4"/>
+<text x="76" y="210" font-size="34" fill="#187369" font-weight="600" text-anchor="start">01</text>
+<text x="148" y="199" font-size="17" fill="#187369" font-weight="400" text-anchor="start">SOURCE CONSISTENCY</text>
+<text x="148" y="238" font-size="31" fill="#172d36" font-weight="600" text-anchor="start">8 principal modules matched</text>
+<text x="148" y="272" font-size="21" fill="#53656a" font-weight="400" text-anchor="start">Installed files compared with local extension source.</text>
+<rect x="48" y="310" width="1104" height="124" rx="8" fill="#e5ebe4"/>
+<text x="76" y="354" font-size="34" fill="#187369" font-weight="600" text-anchor="start">02</text>
+<text x="148" y="343" font-size="17" fill="#187369" font-weight="400" text-anchor="start">SELECTED OFFLINE TESTS</text>
+<text x="148" y="382" font-size="31" fill="#172d36" font-weight="600" text-anchor="start">27 tests passed</text>
+<text x="148" y="416" font-size="21" fill="#53656a" font-weight="400" text-anchor="start">17 rental tests + 10 adapter / registry tests.</text>
+<rect x="48" y="454" width="1104" height="124" rx="8" fill="#e5ebe4"/>
+<text x="76" y="498" font-size="34" fill="#187369" font-weight="600" text-anchor="start">03</text>
+<text x="148" y="487" font-size="17" fill="#187369" font-weight="400" text-anchor="start">SYNTHETIC FUNCTION CHECKS</text>
+<text x="148" y="526" font-size="31" fill="#172d36" font-weight="600" text-anchor="start">5 checks recorded</text>
+<text x="148" y="560" font-size="21" fill="#53656a" font-weight="400" text-anchor="start">Date ambiguity, conflicts, invalid dates and selected text checks.</text>
+<rect x="48" y="598" width="1104" height="167" rx="8" fill="#ece7dc" stroke="#a58d65" stroke-dasharray="7 6"/>
+<text x="76" y="642" font-size="34" fill="#80683c" font-weight="600" text-anchor="start">04</text>
+<text x="148" y="631" font-size="17" fill="#80683c" font-weight="400" text-anchor="start">FIELD ACCEPTANCE / SEPARATE TRACK</text>
+<text x="148" y="672" font-size="31" fill="#172d36" font-weight="600" text-anchor="start">Beyond the current checks</text>
+<text x="148" y="708" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">Live chat capture, autonomous replies and persistent coordination</text>
+<text x="148" y="742" font-size="22" fill="#53656a" font-weight="400" text-anchor="start">need scenario-specific acceptance evidence.</text>
+<path d="M48 815 L1152 815" fill="none" stroke="#bbc9bf" stroke-width="2"/>
+<text x="48" y="854" font-size="20" fill="#53656a" font-weight="400" text-anchor="start">Recorded 2026-10-21 / Offline results are not customer-outcome metrics.</text>
+<text x="48" y="888" font-size="19" fill="#53656a" font-weight="400" text-anchor="start">Counts describe distinct evidence layers and are not added into a single score.</text>
+</g></svg>

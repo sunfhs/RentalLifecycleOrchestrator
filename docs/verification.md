@@ -4,6 +4,8 @@
 
 Recorded on **2026-10-21, Asia/Tokyo**. This record distinguishes inspected assets, executed checks, historical reports and design cases.
 
+![Verification layers and their acceptance boundaries](../assets/verification-layers.png)
+
 ## Current inspection
 
 - Five relevant rental task skills and their supporting reference files exist locally.
@@ -52,3 +54,18 @@ The historical record also leaves real WeChat capture → candidate display → 
 Not exercised by this release: live WeChat capture, end-to-end autonomous reply sending, persistent cross-channel state, automatic field-task dispatch, physical task completion, post-restart behavior or the compatibility of future agent tools.
 
 The business experience of approximately four years and 300+ completed client engagements is author-reported. No customer-level audit or deduplication was performed for publication. No accuracy, conversion or time-saving metric is inferred from these records.
+
+## Evaluation design for the coordination layer
+
+Future evaluation should use a fixed set of stage-labeled synthetic situations so that changing a model, retriever or agent platform does not also change the test question. Scenarios should include missing facts, contradictory dates, stale appointments, repeated external notices and unsuccessful physical actions.
+
+| Evaluation question | Relevant observation | Current evidence |
+|---|---|---|
+| Does an ambiguous date remain unresolved? | Validator output for missing, competing or invalid dates | Recorded function checks |
+| Does current-question retrieval exclude unrelated later-stage material? | Selected references and their source context | Selected private offline tests |
+| Does a rejected candidate stay out of displayed output? | Generation control-path behavior | Selected private offline tests |
+| Does case state change only with sufficient evidence? | Transition history and supporting events | Target evaluation; no measured result |
+| Does one logical event produce one intended task? | Duplicate task count for repeated notices | Target evaluation; no measured result |
+| Does rescheduling make an old assignment non-actionable? | Current task version and cancellation outcome | Target evaluation; no measured result |
+
+These observations could support measures such as unsupported-claim rate, inappropriate-transition rate and duplicate-dispatch count. Their denominators and scenario composition would need to be fixed before publishing scores. The current record contains no such scores, no live customer experiment and no inferred operational-efficiency improvement.
