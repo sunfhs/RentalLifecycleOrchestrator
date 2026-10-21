@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+  <title id="title">From a confirmed event to a field task</title>
+  <desc id="desc">Synthetic design illustration. A confirmed key-release notice and appointment lead to a key-collection task at a fictional office. Missing confirmation keeps the task pending. This is not an application screenshot.</desc>
+  <rect width="1440" height="720" fill="#f4f3ed"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="57" font-size="18" letter-spacing="2" fill="#187369">CASE 02 / SYNTHETIC DESIGN ILLUSTRATION</text>
+    <text x="56" y="114" font-size="42" font-weight="600" fill="#172d36">A confirmed event becomes an actionable task.</text>
+    <rect x="56" y="167" width="474" height="220" rx="8" fill="#e5ebe4"/>
+    <text x="84" y="211" font-size="18" letter-spacing="1.5" fill="#187369">INPUT / CASE DEMO-01</text>
+    <text x="84" y="259" font-size="29" font-weight="600" fill="#172d36">Key release confirmed</text>
+    <text x="84" y="304" font-size="22" fill="#53656a">Release conditions checked</text>
+    <text x="84" y="343" font-size="22" fill="#53656a">Collection appointment confirmed</text>
+    <path d="M556 275 H609 M599 264 L610 275 L599 286" fill="none" stroke="#187369" stroke-width="3"/>
+    <rect x="638" y="167" width="746" height="432" rx="8" fill="#fffefa" stroke="#c7ceca"/>
+    <rect x="638" y="167" width="7" height="432" fill="#187369"/>
+    <text x="674" y="211" font-size="18" letter-spacing="1.5" fill="#187369">OUTPUT / FIELD TASK</text>
+    <text x="674" y="261" font-size="33" font-weight="600" fill="#172d36">Collect the released key</text>
+    <path d="M674 285 H1348" stroke="#d9dfd8"/>
+    <g font-size="18" fill="#53656a">
+      <text x="674" y="326">WHEN</text>
+      <text x="674" y="381">WHERE</text>
+      <text x="674" y="436">REQUIRES</text>
+      <text x="674" y="491">REPORT</text>
+    </g>
+    <g font-size="23" fill="#172d36">
+      <text x="824" y="326">23 Oct 2026 / 14:00–14:30</text>
+      <text x="824" y="381">Demo Management Office / Desk A</text>
+      <text x="824" y="436">Confirmed release and appointment</text>
+      <text x="824" y="491">Collected, time, or exception</text>
+    </g>
+    <text x="674" y="558" font-size="19" fill="#53656a">A proposed task is not evidence of a completed handover.</text>
+    <rect x="56" y="418" width="474" height="181" rx="8" fill="#ece7dc"/>
+    <text x="84" y="461" font-size="18" letter-spacing="1.5" fill="#80683c">IF CONFIRMATION IS MISSING</text>
+    <text x="84" y="510" font-size="28" font-weight="600" fill="#172d36">Keep the task pending.</text>
+    <text x="84" y="552" font-size="22" fill="#53656a">Request the missing information.</text>
+    <path d="M56 639 H1384" stroke="#c7ceca"/>
+    <text x="56" y="679" font-size="18" fill="#53656a">Fictional case, office and appointment. Illustrates target behavior; not a deployed product screenshot.</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "recorded_on": "2026-10-21",
+  "timezone": "Asia/Tokyo",
+  "record_type": "executed deterministic function checks on synthetic inputs",
+  "source_module": "rental_local.py",
+  "source_sha256": "23802bb1d7e970cac5c9702a2d3a5a30676ca8f980652ccbc2a84cbba07a3448",
+  "model_call": false,
+  "screen_capture": false,
+  "private_knowledge_loaded": false,
+  "cases": [
+    {
+      "id": "missing-year",
+      "input": "4月1日入住",
+      "reference_date": "2026-10-21",
+      "actual_output": "入住年份未明确，先确认年份，不自动推算。"
+    },
+    {
+      "id": "conflicting-dates",
+      "input": "2027年4月1日入住，改成2027年5月1日入住",
+      "reference_date": "2026-10-21",
+      "actual_output": "存在多个入住日期，先确认当前有效日期，不擅自选择。"
+    },
+    {
+      "id": "invalid-date",
+      "input": "2027年2月30日入住",
+      "reference_date": "2026-10-21",
+      "actual_output": "入住日期无效，需确认具体日期。"
+    },
+    {
+      "id": "unsupported-promise",
+      "input": "一定能租到。",
+      "blocked": true
+    },
+    {
+      "id": "qualified-uncertainty",
+      "input": "无法保证审查一定通过。",
+      "blocked": false
+    }
+  ]
+}

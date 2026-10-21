@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">Rental Lifecycle Orchestrator</title>
+  <desc id="desc">Field-informed AI operations: client context, private knowledge, checked work and field tasks. Public case studies with a private implementation.</desc>
+  <rect width="1600" height="640" fill="#f4f3ed"/>
+  <rect x="56" y="60" width="7" height="346" fill="#187369"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="88" y="91" font-size="21" letter-spacing="3" fill="#187369">APPLIED AI / JAPANESE RENTAL OPERATIONS</text>
+    <text x="82" y="200" font-size="85" font-weight="650" letter-spacing="-3" fill="#172d36">Rental Lifecycle</text>
+    <text x="82" y="296" font-size="85" font-weight="650" letter-spacing="-3" fill="#172d36">Orchestrator</text>
+    <text x="88" y="361" font-size="27" fill="#53656a">From client conversations to field tasks.</text>
+    <text x="88" y="399" font-size="23" fill="#53656a">Public case studies. Private operational knowledge.</text>
+    <rect x="1120" y="78" width="376" height="302" rx="8" fill="#e5ebe4"/>
+    <text x="1150" y="124" font-size="18" letter-spacing="2" fill="#187369">DESIGN PRINCIPLE</text>
+    <text x="1150" y="184" font-size="30" font-weight="600" fill="#172d36">What is known?</text>
+    <text x="1150" y="231" font-size="30" font-weight="600" fill="#172d36">What can proceed?</text>
+    <text x="1150" y="278" font-size="30" font-weight="600" fill="#172d36">Who needs to act?</text>
+    <path d="M1150 311 H1464" stroke="#bbc9bf"/>
+    <text x="1150" y="347" font-size="20" fill="#53656a">Context → decision → action</text>
+    <path d="M88 459 H1496" stroke="#c7ceca"/>
+    <g font-size="18" letter-spacing="1.5" fill="#187369">
+      <text x="88" y="508">01 / CONTEXT</text>
+      <text x="452" y="508">02 / KNOWLEDGE</text>
+      <text x="816" y="508">03 / CHECKED WORK</text>
+      <text x="1180" y="508">04 / FIELD ACTION</text>
+    </g>
+    <g font-size="23" fill="#172d36">
+      <text x="88" y="548">Client intent and facts</text>
+      <text x="452" y="548">Notion and task skills</text>
+      <text x="816" y="548">Retrieval and assistance</text>
+      <text x="1180" y="548">Confirmed assignments</text>
+    </g>
+    <text x="88" y="600" font-size="17" fill="#53656a">RENTAL LIFECYCLE ORCHESTRATOR</text>
+    <text x="1496" y="600" font-size="17" text-anchor="end" fill="#53656a">PROJECT DOSSIER / 2026</text>
+  </g>
+</svg>

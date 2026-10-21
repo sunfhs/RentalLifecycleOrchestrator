@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.*
+__pycache__/
+*.pyc
+private/
+_private/
+skills/
+SKILL.md
+notion-export/
+conversations.json
+rental-knowledge.json
+*.zip
+*.pdf
+*.log
+*.patch
+*.bak
